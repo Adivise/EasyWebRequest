@@ -32,10 +32,9 @@ const sendMap = (req) => {
       const artistName = beatmaps[0]["artist"];
       const diffName = beatmaps[0]["version"];
 
-      const finalMessage = `[${fullMapLink} ${artistName} - ${songTitle} [${diffName}]]`;
+      let finalMessage = `[${fullMapLink} ${artistName} - ${songTitle} [${diffName}]]`;
       if (req.mods.length > 0) {
-        const modsString = req.mods.map((mod) => `+${mod}`).join(" ");
-        finalMessage += ` ${modsString}`;
+        finalMessage += ` +${req.mods.join(", ")}`;
       }
 
       msg.sendMessage(`@${req.twitchUsername}: ${finalMessage}`);
