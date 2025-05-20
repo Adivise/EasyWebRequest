@@ -40,7 +40,7 @@ const sendMap = (req) => {
       msg.sendMessage(`@${req.twitchUsername}: ${finalMessage}`);
       console.log(`@${req.twitchUsername}: ${finalMessage}`);
 
-      new Database({ mapInfo: beatmaps[0], twitchUsername: req.twitchUsername }).save().then(() => {
+      new Database({ mapInfo: beatmaps[0], twitchUsername: req.twitchUsername, mods: req.mods }).save().then(() => {
           console.log(`Map ${mapID} saved to the database.`);
           client.disconnect();
           console.log("Disconnected from Bancho.");
