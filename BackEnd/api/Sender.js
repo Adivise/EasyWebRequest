@@ -38,7 +38,7 @@ const sendMap = (req) => {
         finalMessage += ` ${modsString}`;
       }
 
-      // msg.sendMessage(`@${req.twitchUsername}: ${finalMessage}`);
+      msg.sendMessage(`@${req.twitchUsername}: ${finalMessage}`);
       console.log(`@${req.twitchUsername}: ${finalMessage}`);
 
       new Database({ mapInfo: beatmaps[0], twitchUsername: req.twitchUsername }).save().then(() => {
