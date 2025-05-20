@@ -1,0 +1,3 @@
+module.exports = {
+    REACT_APP_API_URL: 'http://localhost:3001', // port need same as in BackEnd/.env API PORT
+}

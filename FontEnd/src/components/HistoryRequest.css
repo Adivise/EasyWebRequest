@@ -1,0 +1,80 @@
+.history-box {
+  width: 50%;
+  height: 400px;
+  overflow-y: auto;
+  background-color: rgb(41, 40, 40);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(0, 255, 255, 0.8); /* Smaller Neon Border */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5), 
+              0 0 15px rgba(0, 255, 255, 0.3); /* Softer Glow */
+  animation: glowing-effect 8s ease-in-out infinite alternate; /* Slower Animation */
+}
+
+/* ✅ Slower & Softer Glow Animation */
+@keyframes glowing-effect {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.4), 
+                0 0 10px rgba(0, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 
+                0 0 20px rgba(0, 255, 255, 0.4);
+  }
+}
+
+
+/* ✅ Style for the header inside the box */
+.history-header {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ Separate request content from header */
+.history-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Custom Scrollbar */
+.history-box::-webkit-scrollbar {
+  width: 5px;
+}
+
+.history-box::-webkit-scrollbar-thumb {
+  background-color: rgb(26, 94, 195);
+  border-radius: 3px;
+}
+
+/* Neon Hover for Request Nodes */
+.request-node {
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.request-node:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 
+              0 0 20px rgba(0, 255, 255, 0.6); /* Neon Glow on Hover */
+}
+
+.time {
+  font-weight: bold;
+}
+
+.request-text {
+  color: inherit;
+  text-decoration: none;
+}

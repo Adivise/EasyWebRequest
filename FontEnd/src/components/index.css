@@ -1,0 +1,29 @@
+/* ✅ Custom Toast Notification */
+.custom-toast {
+  color: #00fff5; /* Neon cyan text */
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ✅ Success Toast */
+.custom-toast.success {
+  background: rgba(0, 255, 100, 0.9);
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 255, 100, 0.9);
+}
+
+/* ✅ Error Toast */
+.custom-toast.error {
+  background: rgba(255, 30, 30, 0.9);
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 30, 30, 0.9);
+}
+
+/* ✅ Warning Toast */
+.custom-toast.warning {
+  background: rgba(255, 165, 0, 0.9);
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.9);
+}

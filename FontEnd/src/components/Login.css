@@ -1,0 +1,14 @@
+.btn-primary {
+  width: 200px; /* Set a fixed width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between text and logo */
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+.twitchLogo {
+  width: 20px; /* Reduce Twitch logo size */
+  height: 20px;
+}
